@@ -1,12 +1,11 @@
-import Form from "./components/Form";
+import Background from "./components/Background";
+import Login from "./pages/Login";
 
 export default function App() {
     return (
-        <main className="min-h-screen flex items-center justify-center w-full">
-            <section className="shadow-md rounded-lg px-8 py-6 max-w-md">
-                <h1 className="text-xl font-bold text-center mb-4 text-primary">Entrar</h1>
-                <Form />
-            </section>
-        </main>
+        <div className="flex flex-col justify-end">
+            <Login />
+            <Background />       
+        </div>
     )
 }

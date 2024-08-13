@@ -7,22 +7,19 @@ interface InputProps {
     }
 }
 
-export const Input: React.FC<InputProps> = ({ data }) => { 
+export default function Input({ data }: InputProps){ 
     return (
-        <div className="mb-4">
+        <div className="text-xs md:text-sm mb-4">
             <label className="text-sm block">{ data.label }</label>
-            <a className="flex items-center gap-2 border p-1">
+            <div className="flex items-center gap-2 border p-1 focus-within:ring-2 focus-within:ring-offset-1 focus-within:ring-primary-light rounded-md transition-all">
                 { data.icon }
-                <input type={ data.type } 
-                    className="w-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                <input 
+                    type={ data.type } 
+                    className="w-full focus:outline-none group-focus:bg-slate-800"
                     required
                     placeholder={ data.placeholder }
                 />
-            </a>
+            </div>
         </div>
     )
 }
-
-export default Input;
-
-{/* <input type="password" id="password" class="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter your password" required></input> */}
