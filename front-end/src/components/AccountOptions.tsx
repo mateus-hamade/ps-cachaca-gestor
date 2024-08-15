@@ -1,6 +1,6 @@
-import Button from "./Button";
+import Button from "./Button"
 
-import { googleButton, microsoftButton } from "../utils/ButtonData";
+import { googleButton, microsoftButton } from "../utils/ButtonData"
 
 export default function AuthOptions() {
     return (

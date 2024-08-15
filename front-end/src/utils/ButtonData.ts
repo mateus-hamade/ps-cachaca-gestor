@@ -1,4 +1,4 @@
-import googleIcon from '../assets/icons/google-48.png'
+import googleIcon    from '../assets/icons/google-48.png'
 import microsoftIcon from '../assets/icons/microsoft-48.png'
 
 const googleButton = { 

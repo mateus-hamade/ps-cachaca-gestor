@@ -1,18 +1,25 @@
 import express from 'express'
+
 import { authUser } from '../controllers/user-controller'
 
 const router = express.Router()
 
 router.post('/', async (request, response) => {
-    const { username, senha } = request.body
-
-    const user = await authUser(username, senha)
+    const { username, password } = request.body
+    
+    const user = await authUser(username, password)
 
     if (!user) {
-        return response.status(401).json({ message: 'Usuário não encontrado'})
+        return response.json({
+            message: "Usuário não encontrado",
+        })
+    } else if (user?.password !== password) {
+        return response.json({
+            message: "Senha inválida",
+        })
     }
-
-    return response.status(200).json({ message: 'Usuário autenticado'})
+    
+    return response.status(200).json({ user })
 })
 
 export default router

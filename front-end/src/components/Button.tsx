@@ -1,8 +1,8 @@
 interface ButtonProps {
     data: {
-        style: string;
-        name: string;
-        image?: string;
+        style: string
+        name: string
+        image?: string
     }
 }
 

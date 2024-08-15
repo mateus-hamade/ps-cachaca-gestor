@@ -6,12 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'background': 'url("/src/assets/sugarcane-3.png")',
+        'background1': 'url("/src/assets/sugarcane-blur.png")',
+      },
       colors: {
         "primary": "#4B905A",
         "primary-light": "#6ABE7C",
         "primary-dark": "#2E6F3D",
-        "secondary": "#594B30",
-        "secondary-light": "#7B6B4A",
+        "secondary": "#CEB16B",
+        "secondary-light": "#efd097",
       }
     },
   },
