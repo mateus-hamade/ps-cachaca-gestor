@@ -1,6 +1,6 @@
 import { connectionMongoDB } from '../db/connection'
 
-export async function authUser(email: string, password: string) {
+export async function authUser(email: string) {
     const database = await connectionMongoDB()
     const collection = database.collection('User')
 

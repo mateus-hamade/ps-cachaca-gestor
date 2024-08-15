@@ -7,14 +7,14 @@ const router = express.Router()
 router.post('/', async (request, response) => {
     const { username, password } = request.body
     
-    const user = await authUser(username, password)
+    const user = await authUser(username)
 
     if (!user) {
-        return response.json({
+        return response.status(404).json({
             message: "Usuário não encontrado",
         })
     } else if (user?.password !== password) {
-        return response.json({
+        return response.status(401).json({
             message: "Senha inválida",
         })
     }

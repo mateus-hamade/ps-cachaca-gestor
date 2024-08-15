@@ -9,6 +9,5 @@ app.use(express.json())
 app.use(cors())
 
 app.use('/login', userRouter)
-app.use('/list',  userRouter)
 
 export default app

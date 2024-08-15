@@ -1,6 +1,7 @@
 import Body    from "../components/Body"
 import Header  from "../components/Header"
 import useAuth from "../hooks/useAuth"
+import Popup  from "../components/PopUp"
 
 import { useLocation } from "react-router-dom"
 
@@ -17,6 +18,8 @@ export default function DashBoard(){
 
     return (
         <main className="flex flex-col h-screen">
+            <Popup />
+
             <Header userName={ userName }/>
             <Body />
         </main>
