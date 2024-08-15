@@ -1,6 +1,7 @@
-import { useState } from "react"
-import { postUser } from "../services/api"
+import { useState }    from "react"
 import { useNavigate } from "react-router-dom";
+
+import { postUser }    from "../services/api"
 
 export function useFormHandlers() {
     const [email, setEmail]       = useState("");
@@ -20,7 +21,6 @@ export function useFormHandlers() {
             } else if (response.message === "Usuário não encontrado") {
                 setEmailError(response.message)
             }
-
 
             return navigate("/dashboard", { 
                 state: { 

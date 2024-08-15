@@ -1,8 +1,8 @@
 import Tittle from "./Tittle"
-import Nav from "./Nav"
+import Nav    from "./Nav"
 
 import { Vegan } from "lucide-react"
-import { User } from "lucide-react" 
+import { User }  from "lucide-react" 
 
 interface HeaderProps {
     userName: string

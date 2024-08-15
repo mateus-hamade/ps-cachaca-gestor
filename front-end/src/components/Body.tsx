@@ -1,4 +1,4 @@
-import Tittle from "./Tittle"
+import Tittle      from "./Tittle"
 import InfoSection from "./InfoSection"
 
 import { ChevronDown, ChartSpline, PackageSearch } from "lucide-react"

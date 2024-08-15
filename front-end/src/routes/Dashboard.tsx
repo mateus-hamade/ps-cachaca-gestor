@@ -1,9 +1,8 @@
-import Body from "../components/Body"
-import Header from "../components/Header"
+import Body    from "../components/Body"
+import Header  from "../components/Header"
 import useAuth from "../hooks/useAuth"
 
 import { useLocation } from "react-router-dom"
-
 
 export default function DashBoard(){
     const location = useLocation()
