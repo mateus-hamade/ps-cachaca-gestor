@@ -1,25 +1,6 @@
 import Anchor from "./Anchor"
 
-import { Store, ShoppingCart, Users, Package } from "lucide-react"
-
-const navLinks = [
-    { 
-        text: "Marketplace",
-        icon: <Store />
-    },
-    { 
-        text: "Clientes",
-        icon: <Users />
-    },
-    { 
-        text: "Vendas",
-        icon: <ShoppingCart />
-    },
-    {   
-        text: "Estoque",
-        icon: <Package />
-    }
-]
+import { navLinks } from "../utils/NavData"
 
 export default function Nav() {
     return (
@@ -29,7 +10,7 @@ export default function Nav() {
                     <Anchor 
                         key={ index }
                         data={ link }
-                        link={ "#" } 
+                        link={ "/dashboard" } 
                         style={ "flex gap-2 text-primary hover:text-primary-light transition all" } 
                     />
                 ))

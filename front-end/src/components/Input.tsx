@@ -27,7 +27,7 @@ export default function Input({ data, onChangeData, error }: InputProps) {
                 />
             </div>
             <p id="error" className="text-red-500 text-xs italic">
-                {error.emailError || error.passwordError}
+                { error.emailError || error.passwordError }
             </p>
         </div>
     )
